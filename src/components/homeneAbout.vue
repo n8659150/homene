@@ -1,5 +1,5 @@
 <template>
-<section id="about">
+<section :id="anchorTarget2">
 			<div class="container">
 				<div class="row">
 

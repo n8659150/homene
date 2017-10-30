@@ -13,8 +13,8 @@
 					<div class="wow fadeInUp col-md-3 col-sm-6" data-wow-delay="0.4s">
 						<!-- WORK THUMB -->
 						<div class="work-thumb">
-							<a href="../images/work-1.jpg" class="image-popup">
-								<img src="../images/work-1.jpg" class="img-responsive" alt="Work">
+							<a href="../../static/images/work-1.jpg" class="image-popup">
+								<img src="../../static/images/work-1.jpg" class="img-responsive" alt="Work">
 							</a>
 						</div>
 						<h4>Graphic & Branding</h4>
@@ -23,8 +23,8 @@
 					<div class="wow fadeInUp col-md-3 col-sm-6" data-wow-delay="0.6s">
 						<!-- WORK THUMB -->
 						<div class="work-thumb">
-							<a href="../images/work-2.jpg" class="image-popup">
-								<img src="../images/work-2.jpg" class="img-responsive" alt="Work">
+							<a href="../../static/images/work-2.jpg" class="image-popup">
+								<img src="../../static/images/work-2.jpg" class="img-responsive" alt="Work">
 							</a>
 						</div>
 						<h4>Logo Design</h4>
@@ -33,8 +33,8 @@
 					<div class="wow fadeInUp col-md-3 col-sm-6" data-wow-delay="0.8s">
 						<!-- WORK THUMB -->
 						<div class="work-thumb">
-							<a href="../images/work-3.jpg" class="image-popup">
-								<img src="../images/work-3.jpg" class="img-responsive" alt="Work">
+							<a href="../../static/images/work-3.jpg" class="image-popup">
+								<img src="../../static/images/work-3.jpg" class="img-responsive" alt="Work">
 							</a>
 						</div>
 						<h4>Photography</h4>
@@ -43,8 +43,8 @@
 					<div class="wow fadeInUp col-md-3 col-sm-6" data-wow-delay="0.8s">
 						<!-- WORK THUMB -->
 						<div class="work-thumb">
-							<a href="../images/work-4.jpg" class="image-popup">
-								<img src="../images/work-4.jpg" class="img-responsive" alt="Work">
+							<a href="../../static/images/work-4.jpg" class="image-popup">
+								<img src="../../static/images/work-4.jpg" class="img-responsive" alt="Work">
 							</a>
 						</div>
 						<h4>Minimal Themes</h4>
