@@ -19,279 +19,76 @@ export default {
 <template>
 	<div id="app">
 		<!-- PRE LOADER -->
-		<!--<div class="preloader">
+		<div class="preloader" :class="{hideSpinner:pageLoaded}">
 			<div class="spinner">
 				<span class="spinner-rotate"></span>
-			</div>
-		</div>-->
-
-
-		<!-- NAVIGATION SECTION -->
-		<div class="navbar custom-navbar navbar-fixed-top" role="navigation">
-			<div class="container">
-
-				<div class="navbar-header">
-					<button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon icon-bar"></span>
-                    <span class="icon icon-bar"></span>
-                    <span class="icon icon-bar"></span>
-               </button>
-					<!-- lOGO TEXT HERE -->
-					<a href="index.html" class="navbar-brand">Homene.</a>
-				</div>
-
-				<div class="collapse navbar-collapse">
-					<ul class="nav navbar-nav navbar-right">
-						<li><a class="smoothScroll" href="#home">Home</a></li>
-						<li><a class="smoothScroll" href="#about">About Jack Doe</a></li>
-						<li><a class="smoothScroll" href="#work">My Works</a></li>
-						<li><a class="smoothScroll" href="#contact">Contact</a></li>
-					</ul>
-				</div>
-
 			</div>
 		</div>
 
 
+		<!-- NAVIGATION SECTION -->
+		<homeneHeader siteTitle="校长不读书" navItem1="Home" anchorMapping1="home" navItem2="About Jack Li" anchorMapping2="about" navItem3="My Works"
+			anchorMapping3="work" navItem4="Contact" anchorMapping4="contact">
+		</homeneHeader>
+
+
 		<!-- HOME SECTION -->
-		<section id="home">
-
-			<div class="container">
-				<div class="row">
-
-					<div class="col-md-offset-1 col-md-2 col-sm-3">
-						<img src="./images/profile-image.jpg" class="wow fadeInUp img-responsive img-circle" data-wow-delay="0.2s" alt="about image">
-					</div>
-
-					<div class="col-md-8 col-sm-8">
-						<h1 class="wow fadeInUp" data-wow-delay="0.6s">Hey there, My name is Jack Doe and I'm a Senior Interactive Designer & Web Developer.</h1>
-						<a href="#" class="wow fadeInUp btn btn-default section-btn" data-wow-delay="1s">Download Resume</a>
-					</div>
-
-				</div>
-			</div>
-		</section>
-
-		<div class="copyrights">Collect from <a href="http://www.cssmoban.com/">网页模板</a></div>
+		<homeneHome anchorTarget1="home" :profileImg="profileImg" :description="description">
+		</homeneHome>
 		<!-- ABOUT SECTION -->
-		<section id="about">
-			<div class="container">
-				<div class="row">
-
-					<div class="col-md-8 col-sm-12">
-						<div class="about-thumb">
-							<div class="wow fadeInUp section-title" data-wow-delay="0.6s">
-								<h2>A Little Bit Of My Story</h2>
-								<p><strong>Senior Interactive Designer & Web Developer at yourdreamjob.com</strong></p>
-							</div>
-							<div class="wow fadeInUp" data-wow-delay="0.8s">
-								<p>Award winning interdisciplinary Designer & Art director. We have a team who specialise in coding websites and themes
-									perfect blend of style and function for a wide range of interactive product design.</p>
-							</div>
-							<ul class="social-icon">
-								<li class="wow fadeInLeft" data-wow-delay="1s">
-									<a href="#" class="fa fa-twitter"></a>
-								</li>
-								<li class="wow fadeInUp" data-wow-delay="1.2s">
-									<a href="#" class="fa fa-linkedin"></a>
-								</li>
-								<li class="wow fadeInRight" data-wow-delay="1.4s">
-									<a href="#" class="fa fa-dribbble"></a>
-								</li>
-							</ul>
-						</div>
-					</div>
-
-					<div class="col-md-4 col-sm-12">
-						<div class="wow fadeInUp" data-wow-delay="0.4s">
-							<h2>On Instagram</h2>
-						</div>
-
-						<div class="wow fadeInUp" data-wow-delay="0.6s">
-							<a href="https://www.instagram.com/p/cqED9yjN0j/">
-								<img src="./images/instagram-image1.jpg" class="img-responsive" alt="instagram image">
-							</a>
-
-							<a href="https://www.instagram.com/p/enL0SsDN51/">
-								<img src="./images/instagram-image2.jpg" class="img-responsive" alt="instagram image">
-							</a>
-
-							<a href="https://www.instagram.com/p/apOuRTDNwJ/">
-								<img src="./images/instagram-image3.jpg" class="img-responsive" alt="instagram image">
-							</a>
-
-							<a href="https://www.instagram.com/p/ZXIj33jN2v/">
-								<img src="./images/instagram-image4.jpg" class="img-responsive" alt="instagram image">
-							</a>
-
-							<a href="https://www.instagram.com/p/Xwev1FjN9-/">
-								<img src="./images/instagram-image5.jpg" class="img-responsive" alt="instagram image">
-							</a>
-						</div>
-					</div>
-
-				</div>
-			</div>
-		</section>
-
+		<homeneAbout anchorTarget2="about" :image1="image1" :image2="image2" :image3="image3" :image4="image4" :image5="image5"></homeneAbout>
 
 		<!-- SKILL SECTION -->
-		<section id="skill">
-			<div class="container">
-				<div class="row">
-
-					<div class="col-md-4 col-sm-6">
-						<div class="wow fadeInUp section-title" data-wow-delay="0.2s">
-							<h2>Expertise</h2>
-							<p>Award winning interdisciplinary Designer & Art director. We have a team who specialise in coding websites.</p>
-						</div>
-					</div>
-
-					<div class="col-md-offset-1 col-md-6 col-sm-6">
-						<div class="skill-thumb">
-
-							<div class="wow fadeInUp" data-wow-delay="1s">
-								<strong>Graphic Design</strong>
-								<span class="pull-right">95%</span>
-								<div class="progress">
-									<div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"
-										style="width: 90%;"></div>
-								</div>
-							</div>
-
-							<div class="wow fadeInUp" data-wow-delay="1.2s">
-								<strong>Minimal Themes</strong>
-								<span class="pull-right">100%</span>
-								<div class="progress">
-									<div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"
-										style="width: 100%;"></div>
-								</div>
-							</div>
-
-							<div class="wow fadeInUp" data-wow-delay="1.4s">
-								<strong>Media & Photography</strong>
-								<span class="pull-right">75%</span>
-								<div class="progress">
-									<div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"
-										style="width: 75%;"></div>
-								</div>
-							</div>
-
-						</div>
-					</div>
-
-				</div>
-			</div>
-		</section>
-
-
+		<homeneSkill></homeneSkill>
 		<!-- WORK SECTION -->
-		<section id="work">
-			<div class="container">
-				<div class="row">
-
-					<div class="col-md-12 col-sm-12">
-						<div class="wow fadeInUp section-title" data-wow-delay="0.2s">
-							<h2>Seleted Works</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur venenatis tincidunt.</p>
-						</div>
-					</div>
-
-					<div class="wow fadeInUp col-md-3 col-sm-6" data-wow-delay="0.4s">
-						<!-- WORK THUMB -->
-						<div class="work-thumb">
-							<a href="./images/work-1.jpg" class="image-popup">
-								<img src="./images/work-1.jpg" class="img-responsive" alt="Work">
-							</a>
-						</div>
-						<h4>Graphic & Branding</h4>
-					</div>
-
-					<div class="wow fadeInUp col-md-3 col-sm-6" data-wow-delay="0.6s">
-						<!-- WORK THUMB -->
-						<div class="work-thumb">
-							<a href="./images/work-2.jpg" class="image-popup">
-								<img src="./images/work-2.jpg" class="img-responsive" alt="Work">
-							</a>
-						</div>
-						<h4>Logo Design</h4>
-					</div>
-
-					<div class="wow fadeInUp col-md-3 col-sm-6" data-wow-delay="0.8s">
-						<!-- WORK THUMB -->
-						<div class="work-thumb">
-							<a href="./images/work-3.jpg" class="image-popup">
-								<img src="./images/work-3.jpg" class="img-responsive" alt="Work">
-							</a>
-						</div>
-						<h4>Photography</h4>
-					</div>
-
-					<div class="wow fadeInUp col-md-3 col-sm-6" data-wow-delay="0.8s">
-						<!-- WORK THUMB -->
-						<div class="work-thumb">
-							<a href="./images/work-4.jpg" class="image-popup">
-								<img src="./images/work-4.jpg" class="img-responsive" alt="Work">
-							</a>
-						</div>
-						<h4>Minimal Themes</h4>
-					</div>
-
-				</div>
-			</div>
-		</section>
-
-
+		<homeneWork anchorTarget3="work"></homeneWork>
 		<!-- CONTACT SECTION -->
-		<section id="contact">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12 col-sm-12">
-						<div class="wow fadeInUp section-title" data-wow-delay="0.2s">
-							<h2>You got projects?</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur venenatis tincidunt.</p>
-						</div>
-					</div>
-
-					<div class="col-md-12 col-sm-12">
-						<!-- CONTACT FORM HERE -->
-						<div class="wow fadeInUp" data-wow-delay="0.6s">
-							<form id="contact-form">
-								<div class="col-md-4 col-sm-4">
-									<input type="text" class="form-control" name="name" placeholder="Name">
-								</div>
-								<div class="col-md-4 col-sm-4">
-									<input type="email" class="form-control" name="email" placeholder="Email">
-								</div>
-								<div class="col-md-4 col-sm-4">
-									<input type="text" class="form-control" name="name" placeholder="Subject">
-								</div>
-								<div class="col-md-12 col-sm-12">
-									<textarea class="form-control" rows="5" name="message" placeholder="Message"></textarea>
-								</div>
-								<div class="col-md-offset-9 col-md-3 col-sm-offset-3 col-sm-6">
-									<button id="submit" type="submit" class="form-control" name="submit">Send Message</button>
-								</div>
-							</form>
-						</div>
-						More Templates <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a> - Collect from <a href="http://www.cssmoban.com/"
-							title="网页模板" target="_blank">网页模板</a>
-					</div>
-
-				</div>
-			</div>
-		</section>
+		<homeneContact anchorTarget4="contact"></homeneContact>
 	</div>
 </template>
 
 <script>
-
-
+import homeneHeader from './components/homeneHeader'
+import homeneHome from './components/homeneHome'
+import homeneAbout from './components/homeneAbout'
+import homeneSkill from './components/homeneSkill'
+import homeneWork from './components/homeneWork'
+import homeneContact from './components/homeneContact'
 export default {
-  name: 'app'
+  name: 'app',
+  data(){
+	  return {
+			// proloader
+			pageLoaded:false,
+			//HOME section
+		  profileImg:"static/images/profile-image.jpg",
+			description:"Hey there, My name is Jack Doe and I'm a Senior Interactive Designer & Web Developer.",
+			//ABOUT section
+			image1:'static/images/instagram-image1.jpg',
+			image2:'static/images/instagram-image2.jpg',
+			image3:'static/images/instagram-image3.jpg',
+			image4:'static/images/instagram-image4.jpg',
+			image5:'static/images/instagram-image5.jpg'
+	  }
+  },
+  components: {
+	homeneHeader,
+	homeneHome,
+	homeneAbout,
+	homeneSkill,
+	homeneWork,
+	homeneContact
+  },
+	mounted(){
+		 setTimeout(() => {
+				this.pageLoaded = true;
+		}, 1500);
+	}
 }
 </script>
 
-<style>
-
+<style scoped>
+	.hideSpinner {
+		display: none;
+	}
 </style>
