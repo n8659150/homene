@@ -27,27 +27,60 @@ export default {
 
 
 		<!-- NAVIGATION SECTION -->
-		<homeneHeader siteTitle="校长不读书" navItem1="Home" anchorMapping1="home" navItem2="About Jack Li" anchorMapping2="about" navItem3="My Works"
-			anchorMapping3="work" navItem4="Contact" anchorMapping4="contact">
+		<homeneHeader :siteTitle="siteTitle" 
+									:navItem1="navItems[0]['name']" 
+									:anchorMapping1="navItems[0]['id']" 
+									:navItem2="navItems[1]['name']" 
+									:anchorMapping2="navItems[1]['id']" 
+									:navItem3="navItems[2]['name']"
+									:anchorMapping3="navItems[2]['id']" 
+									:navItem4="navItems[3]['name']" 
+									:anchorMapping4="navItems[3]['id']">
 		</homeneHeader>
 
 
 		<!-- HOME SECTION -->
-		<homeneHome anchorTarget1="home" :profileImg="profileImg" :description="description">
+		<homeneHome :anchorTarget1="navItems[0]['id']" :profileImg="profileImg" :description="description">
 		</homeneHome>
 		<!-- ABOUT SECTION -->
-		<homeneAbout anchorTarget2="about" :image1="image1" :image2="image2" :image3="image3" :image4="image4" :image5="image5"></homeneAbout>
+		<homeneAbout :anchorTarget2="navItems[1]['id']"
+								 aboutTitle="A Little Bit Of My Story" 
+								 aboutIntro="Senior Interactive Designer & Web Developer at yourdreamjob.com"
+								 aboutParas="Award winning interdisciplinary Designer & Art director. We have a team who specialise in coding websites and themes
+									perfect blend of style and function for a wide range of interactive product design."
+								 :image1="images[0]['src']" 
+								 :image2="images[1]['src']" 
+								 :image3="images[2]['src']" 
+								 :image4="images[3]['src']" 
+								 :image5="images[4]['src']"
+								 :image1Link="images[0]['link']"
+								 :image2Link="images[1]['link']"
+								 :image3Link="images[2]['link']"
+								 :image4Link="images[3]['link']"
+								 :image5Link="images[4]['link']"
+								 >
+		</homeneAbout>
 
 		<!-- SKILL SECTION -->
-		<homeneSkill></homeneSkill>
+		<homeneSkill skillTitle="Expertise" 
+								 skillDesc="Award winning interdisciplinary Designer & Art director. We have a team who specialise in coding websites." 
+								 bar1Title="Graphic Design" 
+								 bar1Width="90%" 
+								 bar2Title="Minimal Themes" 
+								 bar2Width="100%" 
+								 bar3Title="Media & Photography" 
+								 bar3Width="75%">
+		</homeneSkill>
 		<!-- WORK SECTION -->
-		<homeneWork anchorTarget3="work"></homeneWork>
+		<homeneWork :anchorTarget3="navItems[2]['id']"></homeneWork>
 		<!-- CONTACT SECTION -->
-		<homeneContact anchorTarget4="contact"></homeneContact>
+		<homeneContact :anchorTarget4="navItems[3]['id']"></homeneContact>
 	</div>
 </template>
 
 <script>
+// 内容配置
+import siteConfig from '../static/siteConfig'
 import homeneHeader from './components/homeneHeader'
 import homeneHome from './components/homeneHome'
 import homeneAbout from './components/homeneAbout'
@@ -61,14 +94,24 @@ export default {
 			// proloader
 			pageLoaded:false,
 			//HOME section
-		  profileImg:"static/images/profile-image.jpg",
+			siteTitle:'Homene',
+			navItems:[
+					{id:'home',name:'Home'},
+					{id:'about',name:'About Me'},
+					{id:'work',name:'My Work'},
+					{id:'contact',name:'Contact'}
+			],
+		  profileImg:'static/images/profile-image.jpg',
 			description:"Hey there, My name is Jack Doe and I'm a Senior Interactive Designer & Web Developer.",
 			//ABOUT section
-			image1:'static/images/instagram-image1.jpg',
-			image2:'static/images/instagram-image2.jpg',
-			image3:'static/images/instagram-image3.jpg',
-			image4:'static/images/instagram-image4.jpg',
-			image5:'static/images/instagram-image5.jpg'
+			images:[
+				{src:'static/images/instagram-image1.jpg',link:'https://www.instagram.com/p/cqED9yjN0j/'},
+				{src:'static/images/instagram-image2.jpg',link:'https://www.instagram.com/p/enL0SsDN51/'},
+				{src:'static/images/instagram-image3.jpg',link:'https://www.instagram.com/p/apOuRTDNwJ/'},
+				{src:'static/images/instagram-image4.jpg',link:'https://www.instagram.com/p/ZXIj33jN2v/'},
+				{src:'static/images/instagram-image5.jpg',link:'https://www.instagram.com/p/Xwev1FjN9-/'}
+			]
+			
 	  }
   },
   components: {

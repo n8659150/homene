@@ -6,12 +6,11 @@
 					<div class="col-md-8 col-sm-12">
 						<div class="about-thumb">
 							<div class="wow fadeInUp section-title" data-wow-delay="0.6s">
-								<h2>A Little Bit Of My Story</h2>
-								<p><strong>Senior Interactive Designer & Web Developer at yourdreamjob.com</strong></p>
+								<h2{{aboutTitle}}</h2>
+								<p><strong>{{aboutIntro}}</strong></p>
 							</div>
 							<div class="wow fadeInUp" data-wow-delay="0.8s">
-								<p>Award winning interdisciplinary Designer & Art director. We have a team who specialise in coding websites and themes
-									perfect blend of style and function for a wide range of interactive product design.</p>
+								<p>{{aboutParas}}</p>
 							</div>
 							<ul class="social-icon">
 								<li class="wow fadeInLeft" data-wow-delay="1s">
@@ -33,24 +32,24 @@
 						</div>
 
 						<div class="wow fadeInUp" data-wow-delay="0.6s">
-							<a href="https://www.instagram.com/p/cqED9yjN0j/">
-								<img :src="image1" class="img-responsive" alt="instagram image">
+							<a :href="image1Link">
+								<img :src="image1" class="img-responsive" alt="profolio image">
 							</a>
 
-							<a href="https://www.instagram.com/p/enL0SsDN51/">
-								<img :src="image2" class="img-responsive" alt="instagram image">
+							<a :href="image2Link">
+								<img :src="image2" class="img-responsive" alt="profolio image">
 							</a>
 
-							<a href="https://www.instagram.com/p/apOuRTDNwJ/">
-								<img :src="image3" class="img-responsive" alt="instagram image">
+							<a :href="image3Link">
+								<img :src="image3" class="img-responsive" alt="profolio image">
 							</a>
 
-							<a href="https://www.instagram.com/p/ZXIj33jN2v/">
-								<img :src="image4" class="img-responsive" alt="instagram image">
+							<a :href="image4Link">
+								<img :src="image4" class="img-responsive" alt="profolio image">
 							</a>
 
-							<a href="https://www.instagram.com/p/Xwev1FjN9-/">
-								<img :src="image5" class="img-responsive" alt="instagram image">
+							<a :href="image5Link">
+								<img :src="image5" class="img-responsive" alt="profolio image">
 							</a>
 						</div>
 					</div>
@@ -69,7 +68,7 @@ export default {
       msg: "Welcome to Your Vue.js App"
     };
 	},
-	props:['anchorTarget2','image1','image2','image3','image4','image5']
+	props:['anchorTarget2','aboutTitle','aboutIntro','aboutParas','image1','image1Link','image2','image2Link','image3','image3Link','image4','image4Link','image5','image5Link']
 };
 </script>
 
