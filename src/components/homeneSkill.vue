@@ -22,26 +22,26 @@
 								<!-- <span class="pull-right">95%</span> -->
 								<span class="pull-right">{{bar1Width}}</span>
 								<div class="progress">
-									<div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"
+									<div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"
 										:style="'width:' + bar1Width"></div>
 								</div>
 							</div>
 
 							<div class="wow fadeInUp" data-wow-delay="1.2s">
-								<strong>Minimal Themes</strong>
-								<span class="pull-right">100%</span>
+								<strong>{{bar2Title}}</strong>
+								<span class="pull-right">{{bar2Width}}</span>
 								<div class="progress">
-									<div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"
-										style="width: 100%;"></div>
+									<div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"
+										:style="'width:' + bar2Width"></div>
 								</div>
 							</div>
 
 							<div class="wow fadeInUp" data-wow-delay="1.4s">
-								<strong>Media & Photography</strong>
-								<span class="pull-right">75%</span>
+								<strong>{{bar3Title}}</strong>
+								<span class="pull-right">{{bar3Width}}</span>
 								<div class="progress">
-									<div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"
-										style="width: 75%;"></div>
+									<div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"
+										:style="'width:' + bar3Width"></div>
 								</div>
 							</div>
 
@@ -56,12 +56,7 @@
 <script>
 export default {
   name: "homeneSkill",
-  props:['skillTitle','skillDesc','bar1Title','bar2Title','bar3Title','bar1Width','bar2Width','bar3Width'],
-  data() {
-    return {
-      msg: "Welcome to Your Vue.js App"
-    };
-  }
+  props:['skillTitle','skillDesc','bar1Title','bar2Title','bar3Title','bar1Width','bar2Width','bar3Width']
 };
 </script>
 

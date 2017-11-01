@@ -21,11 +21,6 @@
 <script>
 export default {
   name: "homeneHome",
-  data() {
-    return {
-      msg: "Welcome to Your Vue.js App"
-    };
-	},
 	props:['anchorTarget1','profileImg','description']
 };
 </script>

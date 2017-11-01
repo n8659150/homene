@@ -5,49 +5,49 @@
 
 					<div class="col-md-12 col-sm-12">
 						<div class="wow fadeInUp section-title" data-wow-delay="0.2s">
-							<h2>Seleted Works</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur venenatis tincidunt.</p>
+							<h2>{{workTitle}}</h2>
+							<p>{{workDesc}}</p>
 						</div>
 					</div>
 
 					<div class="wow fadeInUp col-md-3 col-sm-6" data-wow-delay="0.4s">
 						<!-- WORK THUMB -->
 						<div class="work-thumb">
-							<a href="../../static/images/work-1.jpg" class="image-popup">
-								<img src="../../static/images/work-1.jpg" class="img-responsive" alt="Work">
+							<a :href="thumb1link" class="image-popup">
+								<img :src="thumb1img" class="img-responsive" alt="Work">
 							</a>
 						</div>
-						<h4>Graphic & Branding</h4>
+						<h4>{{thumb1Title}}</h4>
 					</div>
 
 					<div class="wow fadeInUp col-md-3 col-sm-6" data-wow-delay="0.6s">
 						<!-- WORK THUMB -->
 						<div class="work-thumb">
-							<a href="../../static/images/work-2.jpg" class="image-popup">
-								<img src="../../static/images/work-2.jpg" class="img-responsive" alt="Work">
+							<a :href="thumb2link" class="image-popup">
+								<img :src="thumb2img" class="img-responsive" alt="Work">
 							</a>
 						</div>
-						<h4>Logo Design</h4>
+						<h4>{{thumb2Title}}</h4>
 					</div>
 
 					<div class="wow fadeInUp col-md-3 col-sm-6" data-wow-delay="0.8s">
 						<!-- WORK THUMB -->
 						<div class="work-thumb">
-							<a href="../../static/images/work-3.jpg" class="image-popup">
-								<img src="../../static/images/work-3.jpg" class="img-responsive" alt="Work">
+							<a :href="thumb3link" class="image-popup">
+								<img :src="thumb3img" class="img-responsive" alt="Work">
 							</a>
 						</div>
-						<h4>Photography</h4>
+						<h4>{{thumb3Title}}</h4>
 					</div>
 
 					<div class="wow fadeInUp col-md-3 col-sm-6" data-wow-delay="0.8s">
 						<!-- WORK THUMB -->
 						<div class="work-thumb">
-							<a href="../../static/images/work-4.jpg" class="image-popup">
-								<img src="../../static/images/work-4.jpg" class="img-responsive" alt="Work">
+							<a :href="thumb4link" class="image-popup">
+								<img :src="thumb4img" class="img-responsive" alt="Work">
 							</a>
 						</div>
-						<h4>Minimal Themes</h4>
+						<h4>{{thumb4Title}}</h4>
 					</div>
 
 				</div>
@@ -58,12 +58,7 @@
 <script>
 export default {
   name: "homeneWork",
-  data() {
-    return {
-      msg: "Welcome to Your Vue.js App"
-    };
-	},
-	props:['anchorTarget3']
+  props:['anchorTarget3','workTitle','workDesc','thumb1Title','thumb1img','thumb1link','thumb2Title','thumb2img','thumb2link','thumb3Title','thumb3img','thumb3link','thumb4Title','thumb4img','thumb4link']
 };
 </script>
 

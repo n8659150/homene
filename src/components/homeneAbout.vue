@@ -63,12 +63,7 @@
 <script>
 export default {
   name: "homeneAbout",
-  data() {
-    return {
-      msg: "Welcome to Your Vue.js App"
-    };
-	},
-	props:['anchorTarget2','aboutTitle','aboutIntro','aboutParas','image1','image1Link','image2','image2Link','image3','image3Link','image4','image4Link','image5','image5Link']
+  props:['anchorTarget2','aboutTitle','aboutIntro','aboutParas','image1','image1Link','image2','image2Link','image3','image3Link','image4','image4Link','image5','image5Link']
 };
 </script>
 

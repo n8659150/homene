@@ -1,30 +1,12 @@
-<!--<template>
-  <div id="app">
-    <img src="./assets/logo.png">
-    <HelloWorld/>
-  </div>
-</template>
-
-<script>
-import HelloWorld from './components/HelloWorld'
-
-export default {
-  name: 'app',
-  components: {
-    HelloWorld
-  }
-}
-</script>-->
-
 <template>
 	<div id="app">
+
 		<!-- PRE LOADER -->
 		<div class="preloader" :class="{hideSpinner:pageLoaded}">
 			<div class="spinner">
 				<span class="spinner-rotate"></span>
 			</div>
 		</div>
-
 
 		<!-- NAVIGATION SECTION -->
 		<homeneHeader :siteTitle="siteTitle" 
@@ -38,16 +20,15 @@ export default {
 									:anchorMapping4="navItems[3]['id']">
 		</homeneHeader>
 
-
 		<!-- HOME SECTION -->
 		<homeneHome :anchorTarget1="navItems[0]['id']" :profileImg="profileImg" :description="description">
 		</homeneHome>
+
 		<!-- ABOUT SECTION -->
 		<homeneAbout :anchorTarget2="navItems[1]['id']"
-								 aboutTitle="A Little Bit Of My Story" 
-								 aboutIntro="Senior Interactive Designer & Web Developer at yourdreamjob.com"
-								 aboutParas="Award winning interdisciplinary Designer & Art director. We have a team who specialise in coding websites and themes
-									perfect blend of style and function for a wide range of interactive product design."
+								 :aboutTitle="aboutTitle" 
+								 :aboutIntro="aboutIntro"
+								 :aboutParas="aboutParas"
 								 :image1="images[0]['src']" 
 								 :image2="images[1]['src']" 
 								 :image3="images[2]['src']" 
@@ -62,23 +43,54 @@ export default {
 		</homeneAbout>
 
 		<!-- SKILL SECTION -->
-		<homeneSkill skillTitle="Expertise" 
-								 skillDesc="Award winning interdisciplinary Designer & Art director. We have a team who specialise in coding websites." 
-								 bar1Title="Graphic Design" 
-								 bar1Width="90%" 
-								 bar2Title="Minimal Themes" 
-								 bar2Width="100%" 
-								 bar3Title="Media & Photography" 
-								 bar3Width="75%">
+		<homeneSkill :skillTitle="skillTitle" 
+								 :skillDesc="skillDesc" 
+								 :bar1Title="bar1Title" 
+								 :bar1Width="bar1Width" 
+								 :bar2Title="bar2Title" 
+								 :bar2Width="bar2Width" 
+								 :bar3Title="bar3Title" 
+								 :bar3Width="bar3Width">
 		</homeneSkill>
+
 		<!-- WORK SECTION -->
-		<homeneWork :anchorTarget3="navItems[2]['id']"></homeneWork>
+		<homeneWork :anchorTarget3="navItems[2]['id']"
+								:workTitle="workTitle"
+								:workDesc="workDesc" 
+								:thumb1Title="thumb1Title" 
+								:thumb1img="thumbs[0]['src']" 
+								:thumb1link="thumbs[0]['link']"
+								:thumb2Title="thumb2Title" 
+								:thumb2img="thumbs[1]['src']" 
+								:thumb2link="thumbs[1]['link']"
+								:thumb3Title="thumb3Title" 
+								:thumb3img="thumbs[2]['src']" 
+								:thumb3link="thumbs[2]['link']"
+								:thumb4Title="thumb4Title" 
+								:thumb4img="thumbs[3]['src']" 
+								:thumb4link="thumbs[3]['link']">
+		</homeneWork>
+
 		<!-- CONTACT SECTION -->
-		<homeneContact :anchorTarget4="navItems[3]['id']"></homeneContact>
+		<homeneContact :anchorTarget4="navItems[3]['id']"
+									 :contactTitle="contactTitle"
+									 :contactDesc="contactDesc"
+									 :field1Name="field1Name"
+									 :field1Type="field1Type"
+									 :field2Name="field2Name"
+									 :field2Type="field2Type"
+									 :field3Name="field3Name"
+									 :field3Type="field3Type"
+									 :textAreaFieldName="textAreaFieldName"
+									 :buttonName="buttonName">
+		</homeneContact>
+		<homeneFooter :footerText="footerText">
+		</homeneFooter>
 	</div>
 </template>
 
 <script>
+	
 // 内容配置
 import siteConfig from '../static/siteConfig'
 import homeneHeader from './components/homeneHeader'
@@ -87,32 +99,11 @@ import homeneAbout from './components/homeneAbout'
 import homeneSkill from './components/homeneSkill'
 import homeneWork from './components/homeneWork'
 import homeneContact from './components/homeneContact'
+import homeneFooter from './components/homeneFooter'
 export default {
   name: 'app',
   data(){
-	  return {
-			// proloader
-			pageLoaded:false,
-			//HOME section
-			siteTitle:'Homene',
-			navItems:[
-					{id:'home',name:'Home'},
-					{id:'about',name:'About Me'},
-					{id:'work',name:'My Work'},
-					{id:'contact',name:'Contact'}
-			],
-		  profileImg:'static/images/profile-image.jpg',
-			description:"Hey there, My name is Jack Doe and I'm a Senior Interactive Designer & Web Developer.",
-			//ABOUT section
-			images:[
-				{src:'static/images/instagram-image1.jpg',link:'https://www.instagram.com/p/cqED9yjN0j/'},
-				{src:'static/images/instagram-image2.jpg',link:'https://www.instagram.com/p/enL0SsDN51/'},
-				{src:'static/images/instagram-image3.jpg',link:'https://www.instagram.com/p/apOuRTDNwJ/'},
-				{src:'static/images/instagram-image4.jpg',link:'https://www.instagram.com/p/ZXIj33jN2v/'},
-				{src:'static/images/instagram-image5.jpg',link:'https://www.instagram.com/p/Xwev1FjN9-/'}
-			]
-			
-	  }
+	  return siteConfig
   },
   components: {
 	homeneHeader,
@@ -120,7 +111,8 @@ export default {
 	homeneAbout,
 	homeneSkill,
 	homeneWork,
-	homeneContact
+	homeneContact,
+	homeneFooter
   },
 	mounted(){
 		 setTimeout(() => {

@@ -28,12 +28,7 @@
 <script>
 export default {
   name: "homeneHeader",
-  data() {
-    return {
-      msg: "Welcome to Your Vue.js App"
-    };
-	},
-	props:['siteTitle','navItem1','navItem2','navItem3','navItem4','anchorMapping1','anchorMapping2','anchorMapping3','anchorMapping4']
+  props:['siteTitle','navItem1','navItem2','navItem3','navItem4','anchorMapping1','anchorMapping2','anchorMapping3','anchorMapping4']
 };
 </script>
 
